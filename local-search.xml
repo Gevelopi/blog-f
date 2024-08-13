@@ -45,5 +45,32 @@
   
   
   
+  <entry>
+    <title>Markdown基本语法</title>
+    <link href="/2024/08/13/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"/>
+    <url>/2024/08/13/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p><em>这是斜体</em><br><strong>这是粗体</strong><br><em><strong>这是斜体加粗</strong></em><br>&#x3D;&#x3D;这是高亮&#x3D;&#x3D;<br><del>这是删除线</del><br><u>这行文字已被添加下划线</u><br>break on single new line  设置里面取消勾选<br>换行需要两个以上空格&#x2F;空一行</p><ul><li>这是无序列表</li><li>这是无序列表</li><li>这是无序列表</li></ul><ol><li>这是有序列表</li><li>这是有序列表</li><li>这是有序列表</li></ol><p><a href="URL_ADDRESS">这是链接</a></p><p><img src="/IMAGE_ADDRESS" alt="这是图片"><br>比如：<br><img src="/../images/24test/wallhaven-x8mge3.png" alt="图片描述，可写可不写，但是中括号要有"></p><div align=left><img src="../images/24test/wallhaven-x8mge3.png" border='0' width='60%'></div><blockquote><p>这是引用</p></blockquote><blockquote><p>这是一个引用：</p><blockquote><p>这是一个引用的引用</p><blockquote><p>这是一个引用的引用的引用</p></blockquote></blockquote></blockquote><figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tap">这是代码块，如果要在 Markdown 里引用代码块，只要简单地缩进<span class="hljs-number"> 4 </span>个空格或是<span class="hljs-number"> 1 </span>个制表符就可以<br></code></pre></td></tr></table></figure><p>高亮代码行数</p><figure class="highlight javascript"><figcaption><span>&#123;.line-numbers&#125;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">x, y</span>) &#123;<br>  <span class="hljs-keyword">return</span> x + y<br>&#125;<br></code></pre></td></tr></table></figure><p><code>Hello</code> World.</p><p>创建脚注格式类似这样 [^RUNOOB]。<br>[^RUNOOB]: 菜鸟教程 – 学的不仅是技术，更是梦想！！！</p><table><thead><tr><th>姓名</th><th>年龄</th><th>性别</th></tr></thead><tbody><tr><td>张三</td><td>18</td><td>男</td></tr><tr><td>李四</td><td>20</td><td>女</td></tr><tr><td>王五</td><td>21</td><td>男</td></tr></tbody></table><p>:-：将表头及单元格内容左对齐<br>-:：将表头及单元格内容右对齐<br>:-:：将表头及单元格内容居中</p><table><thead><tr><th align="center">name</th><th align="left">age</th><th align="right">sex</th></tr></thead><tbody><tr><td align="center">tony</td><td align="left">20</td><td align="right">男</td></tr><tr><td align="center">lucy</td><td align="left">18</td><td align="right">女</td></tr></tbody></table><p>分割线：</p><hr><hr><hr><hr><p>注意：写分割线前，要空一行之后写，否则会导致前一行字体放大。</p><p>任务列表</p><ul><li><input checked="" disabled="" type="checkbox"> @mentions, #refs, <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del> supported</li><li><input checked="" disabled="" type="checkbox"> list syntax required (any unordered or ordered list supported)</li><li><input checked="" disabled="" type="checkbox"> this is a complete item</li><li><input checked="" disabled="" type="checkbox"> this is an incomplete item</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>教程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>语法</tag>
+      
+      <tag>Markdown</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
