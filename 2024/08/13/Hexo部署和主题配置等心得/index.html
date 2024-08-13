@@ -27,7 +27,7 @@
 <meta property="og:description" content="Hexo部署和主题配置前言Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装配置 Hexo 安装 Hexo 需要先安装下列应用程序  Node.js Git  1npm install -g hexo-cli  创建项目  执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件  123he">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-13T07:37:33.000Z">
-<meta property="article:modified_time" content="2024-08-13T07:40:08.486Z">
+<meta property="article:modified_time" content="2024-08-13T12:19:31.120Z">
 <meta property="article:author" content="Gevelopi">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="部署">
@@ -262,7 +262,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          643 字
+          633 字
         
       </span>
     
@@ -315,7 +315,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年8月13日 下午
+                    本文最后更新于 2024年8月13日 晚上
                   
                 
               </p>
@@ -386,8 +386,8 @@
 <li><p>首页文章布局 默认 ‘card’ 可选择 ‘block-card’，如果选择 ‘card’ ，建议将每页展示的文章数量设置为 每页9篇</p>
  <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">index_generator:</span><br><span class="hljs-attr">path:</span> <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-attr">per_page:</span> <span class="hljs-number">9</span><br><span class="hljs-attr">order_by:</span> <span class="hljs-string">-date</span><br><span class="hljs-string">//</span> <span class="hljs-string">下面还有个</span> <span class="hljs-number">10</span> <span class="hljs-string">的</span> <span class="hljs-string">修改为</span> <span class="hljs-number">9</span><br><span class="hljs-attr">per_page:</span> <span class="hljs-number">9</span><br><span class="hljs-attr">pagination_dir:</span> <span class="hljs-string">page</span><br></code></pre></td></tr></table></figure>
 </li>
-<li><p>下面此项设置为跟我一样即可显示文章的代码高亮</p>
- <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">highlight:</span><br><span class="hljs-attr">enable:</span> <span class="hljs-literal">false</span><br><span class="hljs-attr">line_number:</span> <span class="hljs-literal">false</span><br><span class="hljs-attr">auto_detect:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">tab_replace:</span> <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-attr">wrap:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">hljs:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">prismjs:</span><br><span class="hljs-attr">enable:</span> <span class="hljs-literal">false</span><br><span class="hljs-attr">preprocess:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">line_number:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">tab_replace:</span> <span class="hljs-string">&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
+<li><p>下面此项设置为，即可显示文章的代码高亮</p>
+ <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">highlight:</span><br><span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">line_number:</span> <span class="hljs-literal">false</span><br><span class="hljs-attr">auto_detect:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">tab_replace:</span> <span class="hljs-string">&#x27;&#x27;</span><br><span class="hljs-attr">wrap:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">hljs:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><ul>
 <li>进入根目录下的source文件夹下创建tags文件夹新建index.md文件</li>
