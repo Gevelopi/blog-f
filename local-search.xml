@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Node.js环境配置</title>
+    <link href="/2024/08/14/Node-js%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <url>/2024/08/14/Node-js%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Node-js环境配置"><a href="#Node-js环境配置" class="headerlink" title="Node.js环境配置"></a>Node.js环境配置</h1><h2 id="1-下载Node-js"><a href="#1-下载Node-js" class="headerlink" title="1. 下载Node.js"></a>1. 下载Node.js</h2><p><a href="https://nodejs.org/en/download/prebuilt-installer">Node.js官网</a>下载长期支持版本，安装时勾选“Add to PATH”选项，这样就可以在命令行中直接使用<code>node</code>命令。建议不要装在C盘，直接把C:\Program Files\nodejs改成E:\Software\nodejs</p><h2 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h2><h3 id="2-1-查看环境变量"><a href="#2-1-查看环境变量" class="headerlink" title="2.1 查看环境变量"></a>2.1 查看环境变量</h3><p>在命令行中输入<code>node -v</code>，如果出现版本号，则说明Node.js已经安装成功。</p><h3 id="2-2-创建文件夹"><a href="#2-2-创建文件夹" class="headerlink" title="2.2 创建文件夹"></a>2.2 创建文件夹</h3><p>在安装路径的根目录下新建两个文件夹，node_cache和node_global</p><p>创建完两个文件夹后，在cmd窗口中输入以下命令（两个路径即是两个文件夹的路径）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 设置全局模块安装路径</span><br>npm config <span class="hljs-built_in">set</span> prefix <span class="hljs-string">&quot;E:\Software\nodejs\node_global&quot;</span><br><span class="hljs-comment"># 设置全局缓存存放路径</span><br>npm config <span class="hljs-built_in">set</span> cache <span class="hljs-string">&quot;E:\Software\nodejs\node_cache&quot;</span><br></code></pre></td></tr></table></figure><p>查看npm全局模块的存放位置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm get prefix<br></code></pre></td></tr></table></figure><p>查看npm全局缓存的位置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm get cache<br></code></pre></td></tr></table></figure><h4 id="2-3-环境配置"><a href="#2-3-环境配置" class="headerlink" title="2.3 环境配置"></a>2.3 环境配置</h4><p>建好以后开始配置环境：右键此电脑——属性——高级系统设置——高级——环境变量</p><p>在【系统变量】中的Path点击编辑，新建，输入&#x3D;&#x3D;E:\Software\nodejs\node_global\node_modules&#x3D;&#x3D;，然后点击确定。</p><p>修改【用户变量】中的 path 变量，将&#x3D;&#x3D;C:\Users\用户名\AppData\Roaming\npm&#x3D;&#x3D; 修改为&#x3D;&#x3D;E:\Software\nodejs\node_global&#x3D;&#x3D;</p><p>此处环境变量的更改影响模块，如果没有修改，cmd会出现找不到下载的模块的情况。例如</p><p>如果执行下列命令出现错误，则说明&#x3D;&#x3D;E:\Software\nodejs\node_modules&#x3D;&#x3D;中没有npm模块，需要<a href="https://nodejs.org/en/download/prebuilt-installer">下载</a>或者复制一个npm模块到此路径下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm -v<br></code></pre></td></tr></table></figure><h4 id="2-4-修改镜像"><a href="#2-4-修改镜像" class="headerlink" title="2.4 修改镜像"></a>2.4 修改镜像</h4><p>更新最新淘宝镜像源：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config <span class="hljs-built_in">set</span> registry https://registry.npmmirror.com<br></code></pre></td></tr></table></figure><p>查看镜像源：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm config get registry<br><span class="hljs-comment">#或者</span><br>npm config list<br></code></pre></td></tr></table></figure><p>cnpm：</p><p>npm是node包管理器，cnpm是中国版npm，淘宝定制，解决网络原因npm无法使用或太慢的问题。执行下列命令进行下载。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g cnpm --registry=https://registry.npmmirror.com<br></code></pre></td></tr></table></figure><h2 id="3-内容预写：安装Vue-CLI"><a href="#3-内容预写：安装Vue-CLI" class="headerlink" title="3. 内容预写：安装Vue CLI"></a>3. 内容预写：安装Vue CLI</h2><p>在命令行中输入以下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g @vue/cli<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>教程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>环境变量</tag>
+      
+      <tag>Node.js</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo部署和主题配置等心得</title>
     <link href="/2024/08/13/Hexo%E9%83%A8%E7%BD%B2%E5%92%8C%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E7%AD%89%E5%BF%83%E5%BE%97/"/>
     <url>/2024/08/13/Hexo%E9%83%A8%E7%BD%B2%E5%92%8C%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E7%AD%89%E5%BF%83%E5%BE%97/</url>
