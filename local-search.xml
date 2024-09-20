@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>在vscode中运行vue命令报错</title>
+    <link href="/2024/09/20/%E5%9C%A8vscode%E4%B8%AD%E8%BF%90%E8%A1%8Cvue%E5%91%BD%E4%BB%A4%E6%8A%A5%E9%94%99/"/>
+    <url>/2024/09/20/%E5%9C%A8vscode%E4%B8%AD%E8%BF%90%E8%A1%8Cvue%E5%91%BD%E4%BB%A4%E6%8A%A5%E9%94%99/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol><li><p>运行 <em><strong>vue – version</strong></em> 报错</p></li><li><p>在 <strong>cmd</strong> 命令行执行  <em><strong>vue – version</strong></em>  正常</p></li></ol><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="修改Windows执行策略"><a href="#修改Windows执行策略" class="headerlink" title="修改Windows执行策略"></a>修改Windows执行策略</h3><ol><li>打开 <strong>PowerShell</strong>  以管理员身份运行</li></ol><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">set-ExecutionPolicy</span> RemoteSigned<br></code></pre></td></tr></table></figure><ol start="2"><li><p>选择 <strong>A</strong> 重新运行</p></li><li><p>检查是否修改成功</p></li></ol><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">get-ExecutionPolicy</span><br></code></pre></td></tr></table></figure><ol start="4"><li>输出 <strong>RemoteSigned</strong> 表示修改成功</li></ol><h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><ol><li><p><strong>set-ExecutionPolicy RemoteSigned</strong> 修改Windows执行策略，使Windows可以执行本地和远程签名的脚本</p></li><li><p><strong>A</strong> 重新运行，使修改生效</p></li><li><p><em><strong>Remotesigned</strong></em>: 这个策略意味着你下载的或从互联网上得到的脚本在运行前需要有数字签名(这通常能证明脚本的来源可信)，但是本地编写的脚本(即你电脑上的脚本)不需要签名就可以运行。这种方式既提供了一定的安全性，又不至于对本地脚本执行造成太多限制。</p></li><li><p>常见的 Execution Policy 值</p><ul><li><p><em><strong>Restricted</strong></em>：<br><strong>描述</strong>：这是最严格的策略。禁止运行任何脚本，包括本地脚本和远程下载的脚本。只能在交互模式下运行单个命令。<br><strong>适用场景</strong>：适用于高安全性的环境，确保不会无意中运行恶意脚本。</p></li><li><p><em><strong>RemoteSigned</strong></em>：<br><strong>描述</strong>：允许运行本地创建的脚本，但要求从互联网下载的脚本必须具有受信任的数字签名才能运行。<br><strong>适用场景</strong>：适用于需要运行本地脚本但希望防止运行未经验证的远程脚本的环境。</p></li><li><p><em><strong>AllSigned</strong></em>：<br><strong>描述</strong>：要求所有脚本（无论是本地创建的还是从互联网下载的）都必须具有受信任的数字签名才能运行。<br><strong>适用场景</strong>：适用于需要最高级别安全性的环境，确保所有脚本都经过验证。</p></li><li><p><em><strong>Unrestricted</strong></em>：<br><strong>描述</strong>：允许运行所有脚本，包括本地脚本和从互联网下载的脚本。可以从互联网下载的脚本会在首次运行时显示警告。<br><strong>适用场景</strong>：适用于开发和测试环境，方便快速运行脚本。</p></li><li><p><em><strong>Bypass</strong></em>：<br><strong>描述</strong>：忽略执行策略，允许运行所有脚本，但不会显示任何警告或提示。<br><strong>适用场景</strong>：适用于需要完全绕过执行策略的自动化脚本或临时任务。</p></li><li><p><em><strong>Undefined</strong></em>：<br><strong>描述</strong>：表示当前作用域（如用户或机器）没有设置执行策略，会继承上级作用域的策略。<br><strong>适用场景</strong>：通常用于未明确设置执行策略的情况。</p></li></ul></li></ol><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.3">Windows执行策略</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>经验</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Vscode</tag>
+      
+      <tag>Vue</tag>
+      
+      <tag>Windows执行策略</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>pymysql连接不上MySQL8.0的解决方案</title>
     <link href="/2024/09/20/pymysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8AMySQL8-0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <url>/2024/09/20/pymysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8AMySQL8-0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>

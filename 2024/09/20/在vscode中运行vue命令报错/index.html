@@ -19,26 +19,26 @@
   <meta name="author" content="Gevelopi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言最近在用pymysql连接MySQL8.0时，发现连接不上，报错如下： 连接数据库代码 12345678import pymysqldb &#x3D; pymysql.connect(    host&#x3D;&#x27;localhost&#x27;,    user&#x3D;&#x27;root&#x27;,    password&#x3D;&#x27;password&#x27;,    database&#x3D;&#x27;t">
+    <meta name="description" content="前言 运行 vue – version 报错  在 cmd 命令行执行  vue – version  正常   解决方案修改Windows执行策略 打开 PowerShell  以管理员身份运行  1set-ExecutionPolicy RemoteSigned   选择 A 重新运行  检查是否修改成功   1get-ExecutionPolicy   输出 RemoteSigned 表示修">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pymysql连接不上MySQL8.0的解决方案">
-<meta property="og:url" content="http://example.com/2024/09/20/pymysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8AMySQL8-0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:title" content="在vscode中运行vue命令报错">
+<meta property="og:url" content="http://example.com/2024/09/20/%E5%9C%A8vscode%E4%B8%AD%E8%BF%90%E8%A1%8Cvue%E5%91%BD%E4%BB%A4%E6%8A%A5%E9%94%99/index.html">
 <meta property="og:site_name" content="Garvey&#39;s Blog">
-<meta property="og:description" content="前言最近在用pymysql连接MySQL8.0时，发现连接不上，报错如下： 连接数据库代码 12345678import pymysqldb &#x3D; pymysql.connect(    host&#x3D;&#x27;localhost&#x27;,    user&#x3D;&#x27;root&#x27;,    password&#x3D;&#x27;password&#x27;,    database&#x3D;&#x27;t">
+<meta property="og:description" content="前言 运行 vue – version 报错  在 cmd 命令行执行  vue – version  正常   解决方案修改Windows执行策略 打开 PowerShell  以管理员身份运行  1set-ExecutionPolicy RemoteSigned   选择 A 重新运行  检查是否修改成功   1get-ExecutionPolicy   输出 RemoteSigned 表示修">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/24/2409/pymysql.jpg">
-<meta property="article:published_time" content="2024-09-20T07:56:28.000Z">
-<meta property="article:modified_time" content="2024-09-20T08:24:54.169Z">
+<meta property="og:image" content="http://example.com/images/24/2409/vuecli5.jpg">
+<meta property="article:published_time" content="2024-09-20T08:25:47.000Z">
+<meta property="article:modified_time" content="2024-09-20T08:48:54.826Z">
 <meta property="article:author" content="Gevelopi">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="MySQL">
-<meta property="article:tag" content="pymysql">
+<meta property="article:tag" content="Vscode">
+<meta property="article:tag" content="Vue">
+<meta property="article:tag" content="Windows执行策略">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/images/24/2409/pymysql.jpg">
+<meta name="twitter:image" content="http://example.com/images/24/2409/vuecli5.jpg">
   
   
   
-  <title>pymysql连接不上MySQL8.0的解决方案 - Garvey&#39;s Blog</title>
+  <title>在vscode中运行vue命令报错 - Garvey&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -236,7 +236,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="pymysql连接不上MySQL8.0的解决方案"></span>
+            <span id="subtitle" data-typed-text="在vscode中运行vue命令报错"></span>
           
         </div>
 
@@ -252,7 +252,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-20 15:56" pubdate>
+        <time datetime="2024-09-20 16:25" pubdate>
           2024年9月20日 下午
         </time>
       </span>
@@ -264,7 +264,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          314 字
+          617 字
         
       </span>
     
@@ -275,7 +275,7 @@
         
         
         
-          3 分钟
+          6 分钟
         
       </span>
     
@@ -312,7 +312,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">pymysql连接不上MySQL8.0的解决方案</h1>
+            <h1 id="seo-header">在vscode中运行vue命令报错</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
@@ -325,36 +325,53 @@
             
               <div class="markdown-body">
                 
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在用pymysql连接MySQL8.0时，发现连接不上，报错如下：</p>
-<p>连接数据库代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pymysql<br><br>db = pymysql.connect(<br>    host=<span class="hljs-string">&#x27;localhost&#x27;</span>,<br>    user=<span class="hljs-string">&#x27;root&#x27;</span>,<br>    password=<span class="hljs-string">&#x27;password&#x27;</span>,<br>    database=<span class="hljs-string">&#x27;test&#x27;</span><br>)<br></code></pre></td></tr></table></figure>
-
-<p>报错信息</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">pymysql<span class="hljs-selector-class">.err</span><span class="hljs-selector-class">.OperationalError</span>: (<span class="hljs-number">1045</span>, <span class="hljs-string">&quot;Access denied for user &#x27;root&#x27;@&#x27;localhost&#x27; (using password: YES)&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="修改MySQL8-0的密码验证方式"><a href="#修改MySQL8-0的密码验证方式" class="headerlink" title="修改MySQL8.0的密码验证方式"></a>修改MySQL8.0的密码验证方式</h3><p>MySQL8.0默认使用 <em><strong>caching_sha2_password</strong></em>，而pymysql默认使用 <em><strong>mysql_native_password</strong></em>，所以需要修改MySQL8.0的密码验证方式。</p>
-<ol>
-<li><p>默认情况下，MySQL 的安装路径可能是 <em><strong>C:\Program Files\MySQL\MySQL Server 8.0\bin</strong></em>。请根据您的实际安装位置进行调整。<br>使用 cd 命令切换到该目录，例如：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd C:\Program Files\MySQL\MySQL Server 8.0\bin<br></code></pre></td></tr></table></figure>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol>
+<li><p>运行 <em><strong>vue – version</strong></em> 报错</p>
 </li>
-<li><p>使用以下命令登录 MySQL 服务器：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mysql -u root -p<br></code></pre></td></tr></table></figure>
+<li><p>在 <strong>cmd</strong> 命令行执行  <em><strong>vue – version</strong></em>  正常</p>
 </li>
-<li><p>修改MySQL8.0的密码验证方式</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="hljs-keyword">WITH</span> mysql_native_password <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;password&#x27;</span>;<br></code></pre></td></tr></table></figure></li>
 </ol>
-<p>此时得到提示此时得到提示Query Ok, 0 rows affected(0.01 sec)，表示修改成功。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="修改Windows执行策略"><a href="#修改Windows执行策略" class="headerlink" title="修改Windows执行策略"></a>修改Windows执行策略</h3><ol>
+<li>打开 <strong>PowerShell</strong>  以管理员身份运行</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">set-ExecutionPolicy</span> RemoteSigned<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>选择 <strong>A</strong> 重新运行</p>
+</li>
+<li><p>检查是否修改成功</p>
+</li>
+</ol>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">get-ExecutionPolicy</span><br></code></pre></td></tr></table></figure>
+
 <ol start="4">
-<li>刷新权限<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> FLUSH PRIVILEGES;<br></code></pre></td></tr></table></figure></li>
+<li>输出 <strong>RemoteSigned</strong> 表示修改成功</li>
 </ol>
-<p>此时得到提示Query OK,0 rows afected (0.01 sec)，表示刷新成功。</p>
-<ol start="5">
-<li>退出MySQL<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> EXIT;<br></code></pre></td></tr></table></figure></li>
+<h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><ol>
+<li><p><strong>set-ExecutionPolicy RemoteSigned</strong> 修改Windows执行策略，使Windows可以执行本地和远程签名的脚本</p>
+</li>
+<li><p><strong>A</strong> 重新运行，使修改生效</p>
+</li>
+<li><p><em><strong>Remotesigned</strong></em>: 这个策略意味着你下载的或从互联网上得到的脚本在运行前需要有数字签名(这通常能证明脚本的来源可信)，但是本地编写的脚本(即你电脑上的脚本)不需要签名就可以运行。这种方式既提供了一定的安全性，又不至于对本地脚本执行造成太多限制。</p>
+</li>
+<li><p>常见的 Execution Policy 值</p>
+<ul>
+<li><p><em><strong>Restricted</strong></em>：<br><strong>描述</strong>：这是最严格的策略。禁止运行任何脚本，包括本地脚本和远程下载的脚本。只能在交互模式下运行单个命令。<br><strong>适用场景</strong>：适用于高安全性的环境，确保不会无意中运行恶意脚本。</p>
+</li>
+<li><p><em><strong>RemoteSigned</strong></em>：<br><strong>描述</strong>：允许运行本地创建的脚本，但要求从互联网下载的脚本必须具有受信任的数字签名才能运行。<br><strong>适用场景</strong>：适用于需要运行本地脚本但希望防止运行未经验证的远程脚本的环境。</p>
+</li>
+<li><p><em><strong>AllSigned</strong></em>：<br><strong>描述</strong>：要求所有脚本（无论是本地创建的还是从互联网下载的）都必须具有受信任的数字签名才能运行。<br><strong>适用场景</strong>：适用于需要最高级别安全性的环境，确保所有脚本都经过验证。</p>
+</li>
+<li><p><em><strong>Unrestricted</strong></em>：<br><strong>描述</strong>：允许运行所有脚本，包括本地脚本和从互联网下载的脚本。可以从互联网下载的脚本会在首次运行时显示警告。<br><strong>适用场景</strong>：适用于开发和测试环境，方便快速运行脚本。</p>
+</li>
+<li><p><em><strong>Bypass</strong></em>：<br><strong>描述</strong>：忽略执行策略，允许运行所有脚本，但不会显示任何警告或提示。<br><strong>适用场景</strong>：适用于需要完全绕过执行策略的自动化脚本或临时任务。</p>
+</li>
+<li><p><em><strong>Undefined</strong></em>：<br><strong>描述</strong>：表示当前作用域（如用户或机器）没有设置执行策略，会继承上级作用域的策略。<br><strong>适用场景</strong>：通常用于未明确设置执行策略的情况。</p>
+</li>
+</ul>
+</li>
 </ol>
-<h3 id="检查身份验证插件"><a href="#检查身份验证插件" class="headerlink" title="检查身份验证插件"></a>检查身份验证插件</h3><p>使用以下 SQL 命令来检查 root 用户的身份验证插件是否已更改为 <em><strong>mysql_native_password</strong></em>：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">user</span>,plugin <span class="hljs-keyword">FROM</span> mysql.user <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">user</span> <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;root&#x27;</span>;<br></code></pre></td></tr></table></figure>
-
-<p>如果输出结果中的 <em><strong>plugin</strong></em> 列显示为 <em><strong>mysql_native_password</strong></em>，则表示身份验证插件已成功更改。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.3">Windows执行策略</a></p>
 
                 
               </div>
@@ -388,11 +405,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
+        <a href="/tags/Vscode/" class="print-no-link">#Vscode</a>
       
-        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
+        <a href="/tags/Vue/" class="print-no-link">#Vue</a>
       
-        <a href="/tags/pymysql/" class="print-no-link">#pymysql</a>
+        <a href="/tags/Windows%E6%89%A7%E8%A1%8C%E7%AD%96%E7%95%A5/" class="print-no-link">#Windows执行策略</a>
       
     </div>
   
@@ -404,8 +421,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>pymysql连接不上MySQL8.0的解决方案</div>
-      <div>http://example.com/2024/09/20/pymysql连接不上MySQL8-0的解决方案/</div>
+      <div>在vscode中运行vue命令报错</div>
+      <div>http://example.com/2024/09/20/在vscode中运行vue命令报错/</div>
     </div>
     <div class="license-meta">
       
@@ -455,18 +472,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/09/20/%E5%9C%A8vscode%E4%B8%AD%E8%BF%90%E8%A1%8Cvue%E5%91%BD%E4%BB%A4%E6%8A%A5%E9%94%99/" title="在vscode中运行vue命令报错">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">在vscode中运行vue命令报错</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/15/Anaconda%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="Anaconda的安装以及环境配置">
-                        <span class="hidden-mobile">Anaconda的安装以及环境配置</span>
+                      <a href="/2024/09/20/pymysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8AMySQL8-0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="pymysql连接不上MySQL8.0的解决方案">
+                        <span class="hidden-mobile">pymysql连接不上MySQL8.0的解决方案</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
