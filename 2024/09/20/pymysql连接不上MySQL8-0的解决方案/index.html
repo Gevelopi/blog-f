@@ -27,7 +27,7 @@
 <meta property="og:description" content="前言最近在用pymysql连接MySQL8.0时，发现连接不上，报错如下： 连接数据库代码 12345678import pymysqldb &#x3D; pymysql.connect(    host&#x3D;&#x27;localhost&#x27;,    user&#x3D;&#x27;root&#x27;,    password&#x3D;&#x27;password&#x27;,    database&#x3D;&#x27;t">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-20T07:56:28.000Z">
-<meta property="article:modified_time" content="2024-09-20T08:15:10.278Z">
+<meta property="article:modified_time" content="2024-09-20T08:18:39.560Z">
 <meta property="article:author" content="Gevelopi">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="MySQL">
@@ -341,11 +341,11 @@
 <li><p>修改MySQL8.0的密码验证方式</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="hljs-keyword">WITH</span> mysql_native_password <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;password&#x27;</span>;<br></code></pre></td></tr></table></figure></li>
 </ol>
-<p>此时得到提示此时得到提示 ***Query Ok, 0 rows affected(0.01 sec)***，表示修改成功。</p>
+<p>此时得到提示此时得到提示Query Ok, 0 rows affected(0.01 sec)，表示修改成功。</p>
 <ol start="4">
 <li>刷新权限<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> FLUSH PRIVILEGES;<br></code></pre></td></tr></table></figure></li>
 </ol>
-<p>此时得到提示 ***Query OK,0 rows afected (0.01 sec)***，表示刷新成功。</p>
+<p>此时得到提示Query OK,0 rows afected (0.01 sec)，表示刷新成功。</p>
 <ol start="5">
 <li>退出MySQL<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> EXIT;<br></code></pre></td></tr></table></figure></li>
 </ol>
