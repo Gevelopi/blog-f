@@ -19,26 +19,24 @@
   <meta name="author" content="Gevelopi">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Anaconda的安装以及环境配置Anaconda的安装简介Anaconda是一个用于科学计算的Python发行版，包含了conda、Python等180多个科学包及其依赖项。Anaconda使用conda作为包管理器，可以方便地安装、更新和卸载Python包。 下载安装Anaconda 打开Anaconda官网下载对应版本的Anaconda，如果官方下载速度较慢，可以前往清华大学开源软件镜像站下">
+    <meta name="description" content="前言最近在用pymysql连接MySQL8.0时，发现连接不上，报错如下： 连接数据库代码 12345678import pymysqldb &#x3D; pymysql.connect(    host&#x3D;&#x27;localhost&#x27;,    user&#x3D;&#x27;root&#x27;,    password&#x3D;&#x27;password&#x27;,    database&#x3D;&#x27;t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Anaconda的安装以及环境配置">
-<meta property="og:url" content="http://example.com/2024/08/15/Anaconda%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:title" content="pymysql连接不上MySQL8.0的解决方案">
+<meta property="og:url" content="http://example.com/2024/09/20/pymysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8AMySQL8-0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.html">
 <meta property="og:site_name" content="Garvey&#39;s Blog">
-<meta property="og:description" content="Anaconda的安装以及环境配置Anaconda的安装简介Anaconda是一个用于科学计算的Python发行版，包含了conda、Python等180多个科学包及其依赖项。Anaconda使用conda作为包管理器，可以方便地安装、更新和卸载Python包。 下载安装Anaconda 打开Anaconda官网下载对应版本的Anaconda，如果官方下载速度较慢，可以前往清华大学开源软件镜像站下">
+<meta property="og:description" content="前言最近在用pymysql连接MySQL8.0时，发现连接不上，报错如下： 连接数据库代码 12345678import pymysqldb &#x3D; pymysql.connect(    host&#x3D;&#x27;localhost&#x27;,    user&#x3D;&#x27;root&#x27;,    password&#x3D;&#x27;password&#x27;,    database&#x3D;&#x27;t">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/24/2408/anaconda.jpg">
-<meta property="article:published_time" content="2024-08-15T07:25:17.000Z">
-<meta property="article:modified_time" content="2024-08-15T13:36:31.913Z">
+<meta property="article:published_time" content="2024-09-20T07:56:28.000Z">
+<meta property="article:modified_time" content="2024-09-20T08:15:10.278Z">
 <meta property="article:author" content="Gevelopi">
-<meta property="article:tag" content="环境变量">
-<meta property="article:tag" content="Anaconda">
 <meta property="article:tag" content="Python">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="pymysql">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/images/24/2408/anaconda.jpg">
   
   
   
-  <title>Anaconda的安装以及环境配置 - Garvey&#39;s Blog</title>
+  <title>pymysql连接不上MySQL8.0的解决方案 - Garvey&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -236,7 +234,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Anaconda的安装以及环境配置"></span>
+            <span id="subtitle" data-typed-text="pymysql连接不上MySQL8.0的解决方案"></span>
           
         </div>
 
@@ -252,8 +250,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-15 15:25" pubdate>
-          2024年8月15日 下午
+        <time datetime="2024-09-20 15:56" pubdate>
+          2024年9月20日 下午
         </time>
       </span>
     
@@ -264,7 +262,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          494 字
+          314 字
         
       </span>
     
@@ -275,7 +273,7 @@
         
         
         
-          5 分钟
+          3 分钟
         
       </span>
     
@@ -312,12 +310,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Anaconda的安装以及环境配置</h1>
+            <h1 id="seo-header">pymysql连接不上MySQL8.0的解决方案</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年8月15日 晚上
+                    本文最后更新于 2024年9月20日 下午
                   
                 
               </p>
@@ -325,59 +323,36 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Anaconda的安装以及环境配置"><a href="#Anaconda的安装以及环境配置" class="headerlink" title="Anaconda的安装以及环境配置"></a>Anaconda的安装以及环境配置</h1><h2 id="Anaconda的安装"><a href="#Anaconda的安装" class="headerlink" title="Anaconda的安装"></a>Anaconda的安装</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Anaconda是一个用于科学计算的Python发行版，包含了conda、Python等180多个科学包及其依赖项。Anaconda使用conda作为包管理器，可以方便地安装、更新和卸载Python包。</p>
-<h3 id="下载安装Anaconda"><a href="#下载安装Anaconda" class="headerlink" title="下载安装Anaconda"></a>下载安装Anaconda</h3><ol>
-<li><p>打开<a target="_blank" rel="noopener" href="https://www.anaconda.com/download/success">Anaconda官网</a>下载对应版本的Anaconda，如果官方下载速度较慢，可以前往<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/">清华大学开源软件镜像站下载Anaconda</a>。</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在用pymysql连接MySQL8.0时，发现连接不上，报错如下：</p>
+<p>连接数据库代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pymysql<br><br>db = pymysql.connect(<br>    host=<span class="hljs-string">&#x27;localhost&#x27;</span>,<br>    user=<span class="hljs-string">&#x27;root&#x27;</span>,<br>    password=<span class="hljs-string">&#x27;password&#x27;</span>,<br>    database=<span class="hljs-string">&#x27;test&#x27;</span><br>)<br></code></pre></td></tr></table></figure>
+
+<p>报错信息</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">pymysql<span class="hljs-selector-class">.err</span><span class="hljs-selector-class">.OperationalError</span>: (<span class="hljs-number">1045</span>, <span class="hljs-string">&quot;Access denied for user &#x27;root&#x27;@&#x27;localhost&#x27; (using password: YES)&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="修改MySQL8-0的密码验证方式"><a href="#修改MySQL8-0的密码验证方式" class="headerlink" title="修改MySQL8.0的密码验证方式"></a>修改MySQL8.0的密码验证方式</h3><p>MySQL8.0默认使用 <em><strong>caching_sha2_password</strong></em>，而pymysql默认使用 <em><strong>mysql_native_password</strong></em>，所以需要修改MySQL8.0的密码验证方式。</p>
+<ol>
+<li><p>默认情况下，MySQL 的安装路径可能是 <em><strong>C:\Program Files\MySQL\MySQL Server 8.0\bin</strong></em>。请根据您的实际安装位置进行调整。<br>使用 cd 命令切换到该目录，例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd C:\Program Files\MySQL\MySQL Server 8.0\bin<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>下载完成后，双击安装包，按照提示进行安装。记得更改文件夹这个地方改一下路径，不推荐安装在c盘，<em><strong>E:\Anaconda3</strong></em></p>
+<li><p>使用以下命令登录 MySQL 服务器：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mysql -u root -p<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>安装完成后，打开命令行窗口，输入<code>conda --version</code>，如果显示版本号，则说明安装成功。</p>
-</li>
+<li><p>修改MySQL8.0的密码验证方式</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="hljs-keyword">WITH</span> mysql_native_password <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;password&#x27;</span>;<br></code></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="Anaconda的环境配置"><a href="#Anaconda的环境配置" class="headerlink" title="Anaconda的环境配置"></a>Anaconda的环境配置</h2><h3 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h3><ol>
-<li><p>打开控制面板，选择“系统和安全”，然后选择“系统”。</p>
-</li>
-<li><p>在系统窗口中，点击左侧的“高级系统设置”。</p>
-</li>
-<li><p>在系统属性窗口中，点击“环境变量”按钮。</p>
-</li>
-<li><p>在环境变量窗口中，找到“用户变量”中的“Path”变量，点击“编辑”按钮。</p>
-</li>
-<li><p>在编辑环境变量窗口中，点击“新建”按钮，添加Anaconda的安装路径和Scripts路径：</p>
-<p> <em><strong>E:\Anaconda3</strong></em> 和</p>
-<p> <em><strong>E:\Anaconda3\Scripts</strong></em> ，以及</p>
-<p> <em><strong>E:\Anaconda3\Library\bin</strong></em> ，</p>
-<p> <em><strong>E:\Anaconda3\Library\usr\bin</strong></em> 和 </p>
-<p> <em><strong>E:\Anaconda3\Library\mingw-w64\bin</strong></em> 。</p>
-</li>
-<li><p>点击“确定”按钮，保存修改。</p>
-</li>
-<li><p>重新打开命令行窗口，输入<code>conda --version</code>，如果显示版本号，则说明环境变量配置成功。</p>
-</li>
+<p>此时得到提示此时得到提示 ***Query Ok, 0 rows affected(0.01 sec)***，表示修改成功。</p>
+<ol start="4">
+<li>刷新权限<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> FLUSH PRIVILEGES;<br></code></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="Anaconda的常用命令"><a href="#Anaconda的常用命令" class="headerlink" title="Anaconda的常用命令"></a>Anaconda的常用命令</h2><ul>
-<li>创建虚拟环境：<code>conda create -n env_name python=3.7</code></li>
-<li>激活虚拟环境：<code>conda activate env_name</code></li>
-<li>退出虚拟环境：<code>conda deactivate</code></li>
-<li>删除虚拟环境：<code>conda remove -n env_name --all</code></li>
-<li>查看所有虚拟环境：<code>conda env list</code></li>
-<li>查看当前虚拟环境中的包：<code>conda list</code></li>
-<li>安装包：<code>conda install package_name</code></li>
-<li>更新包：<code>conda update package_name</code></li>
-<li>卸载包：<code>conda remove package_name</code></li>
-</ul>
-<h3 id="更新base环境下的所有库直接按照以下代码："><a href="#更新base环境下的所有库直接按照以下代码：" class="headerlink" title="更新base环境下的所有库直接按照以下代码："></a>更新base环境下的所有库直接按照以下代码：</h3><ul>
-<li><p>以管理员身份启动 Anaconda Prompt：</p>
-</li>
-<li><p>升级conda(升级Anaconda前需要先升级conda)：<code>conda update conda</code></p>
-</li>
-<li><p>升级anaconda：<code>conda update anaconda</code></p>
-</li>
-<li><p>更新所有包：<code>conda update --all</code></p>
-</li>
-<li><p>更新某个具体的包：<code>conda update package</code></p>
-</li>
-</ul>
+<p>此时得到提示 ***Query OK,0 rows afected (0.01 sec)***，表示刷新成功。</p>
+<ol start="5">
+<li>退出MySQL<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> EXIT;<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="检查身份验证插件"><a href="#检查身份验证插件" class="headerlink" title="检查身份验证插件"></a>检查身份验证插件</h3><p>使用以下 SQL 命令来检查 root 用户的身份验证插件是否已更改为 <em><strong>mysql_native_password</strong></em>：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">user</span>,plugin <span class="hljs-keyword">FROM</span> mysql.user <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">user</span> <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;root&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<p>如果输出结果中的 <em><strong>plugin</strong></em> 列显示为 <em><strong>mysql_native_password</strong></em>，则表示身份验证插件已成功更改。</p>
 
                 
               </div>
@@ -396,7 +371,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
+  <a href="/categories/%E7%BB%8F%E9%AA%8C/" class="category-chain-item">经验</a>
   
   
 
@@ -411,11 +386,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" class="print-no-link">#环境变量</a>
-      
-        <a href="/tags/Anaconda/" class="print-no-link">#Anaconda</a>
-      
         <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+        <a href="/tags/MySQL/" class="print-no-link">#MySQL</a>
+      
+        <a href="/tags/pymysql/" class="print-no-link">#pymysql</a>
       
     </div>
   
@@ -427,8 +402,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Anaconda的安装以及环境配置</div>
-      <div>http://example.com/2024/08/15/Anaconda的安装以及环境配置/</div>
+      <div>pymysql连接不上MySQL8.0的解决方案</div>
+      <div>http://example.com/2024/09/20/pymysql连接不上MySQL8-0的解决方案/</div>
     </div>
     <div class="license-meta">
       
@@ -440,7 +415,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月15日</div>
+          <div>2024年9月20日</div>
         </div>
       
       
@@ -478,18 +453,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/09/20/pymysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8AMySQL8-0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="pymysql连接不上MySQL8.0的解决方案">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">pymysql连接不上MySQL8.0的解决方案</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/14/Node-js%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="Node.js的安装以及环境配置">
-                        <span class="hidden-mobile">Node.js的安装以及环境配置</span>
+                      <a href="/2024/08/15/Anaconda%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="Anaconda的安装以及环境配置">
+                        <span class="hidden-mobile">Anaconda的安装以及环境配置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

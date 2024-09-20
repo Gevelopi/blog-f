@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>pymysql连接不上MySQL8.0的解决方案</title>
+    <link href="/2024/09/20/pymysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8AMySQL8-0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <url>/2024/09/20/pymysql%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8AMySQL8-0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在用pymysql连接MySQL8.0时，发现连接不上，报错如下：</p><p>连接数据库代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pymysql<br><br>db = pymysql.connect(<br>    host=<span class="hljs-string">&#x27;localhost&#x27;</span>,<br>    user=<span class="hljs-string">&#x27;root&#x27;</span>,<br>    password=<span class="hljs-string">&#x27;password&#x27;</span>,<br>    database=<span class="hljs-string">&#x27;test&#x27;</span><br>)<br></code></pre></td></tr></table></figure><p>报错信息</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">pymysql<span class="hljs-selector-class">.err</span><span class="hljs-selector-class">.OperationalError</span>: (<span class="hljs-number">1045</span>, <span class="hljs-string">&quot;Access denied for user &#x27;root&#x27;@&#x27;localhost&#x27; (using password: YES)&quot;</span>)<br></code></pre></td></tr></table></figure><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="修改MySQL8-0的密码验证方式"><a href="#修改MySQL8-0的密码验证方式" class="headerlink" title="修改MySQL8.0的密码验证方式"></a>修改MySQL8.0的密码验证方式</h3><p>MySQL8.0默认使用 <em><strong>caching_sha2_password</strong></em>，而pymysql默认使用 <em><strong>mysql_native_password</strong></em>，所以需要修改MySQL8.0的密码验证方式。</p><ol><li><p>默认情况下，MySQL 的安装路径可能是 <em><strong>C:\Program Files\MySQL\MySQL Server 8.0\bin</strong></em>。请根据您的实际安装位置进行调整。<br>使用 cd 命令切换到该目录，例如：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cd C:\Program Files\MySQL\MySQL Server 8.0\bin<br></code></pre></td></tr></table></figure></li><li><p>使用以下命令登录 MySQL 服务器：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mysql -u root -p<br></code></pre></td></tr></table></figure></li><li><p>修改MySQL8.0的密码验证方式</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="hljs-keyword">WITH</span> mysql_native_password <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;password&#x27;</span>;<br></code></pre></td></tr></table></figure></li></ol><p>此时得到提示此时得到提示 ***Query Ok, 0 rows affected(0.01 sec)***，表示修改成功。</p><ol start="4"><li>刷新权限<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> FLUSH PRIVILEGES;<br></code></pre></td></tr></table></figure></li></ol><p>此时得到提示 ***Query OK,0 rows afected (0.01 sec)***，表示刷新成功。</p><ol start="5"><li>退出MySQL<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> EXIT;<br></code></pre></td></tr></table></figure></li></ol><h3 id="检查身份验证插件"><a href="#检查身份验证插件" class="headerlink" title="检查身份验证插件"></a>检查身份验证插件</h3><p>使用以下 SQL 命令来检查 root 用户的身份验证插件是否已更改为 <em><strong>mysql_native_password</strong></em>：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">mysql<span class="hljs-operator">&gt;</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">user</span>,plugin <span class="hljs-keyword">FROM</span> mysql.user <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">user</span> <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;root&#x27;</span>;<br></code></pre></td></tr></table></figure><p>如果输出结果中的 <em><strong>plugin</strong></em> 列显示为 <em><strong>mysql_native_password</strong></em>，则表示身份验证插件已成功更改。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>经验</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+      <tag>MySQL</tag>
+      
+      <tag>pymysql</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Anaconda的安装以及环境配置</title>
     <link href="/2024/08/15/Anaconda%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     <url>/2024/08/15/Anaconda%E7%9A%84%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
